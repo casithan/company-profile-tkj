@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TKJ | SMK Banjar Asri</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#071426;color:white}
+header{background:#06101f;padding:20px 7%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;box-shadow:0 2px 15px #00bfff25}
+.logo{font-size:22px;font-weight:bold;color:white}.logo span{color:#00c8ff}
+nav{display:flex;gap:22px}
+nav a{color:white;text-decoration:none;font-size:14px;transition:.3s}
+nav a:hover{color:#00c8ff}
+.menu{display:none;font-size:28px;cursor:pointer;color:#00c8ff}
+.hero{min-height:580px;padding:100px 8%;display:flex;align-items:center;background:linear-gradient(90deg,#06101fee,#06101f88),url("https://images.unsplash.com/photo-1519389950473-47ba0277781c") center/cover}
+.hero-content{max-width:650px;animation:slide 1.2s ease}
+.hero h1{font-size:48px;line-height:1.2;margin-bottom:20px}.hero h1 span{color:#00c8ff}
+.hero p{line-height:1.8;color:#d0e5f5;margin-bottom:30px}
+.btn{display:inline-block;background:#00aaff;color:white;padding:14px 25px;border-radius:8px;text-decoration:none;font-weight:bold;box-shadow:0 0 15px #00aaff55;transition:.3s}
+.btn:hover{background:#0077cc;transform:translateY(-4px)}
+section{padding:80px 8%}
+.heading{text-align:center;margin-bottom:45px}
+.heading h2{font-size:32px;color:#00c8ff;margin-bottom:12px}
+.heading p{color:#b8cde0}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+.about img{width:100%;border-radius:15px}
+.about h3{font-size:26px;color:#00c8ff;margin-bottom:15px}
+.about p{line-height:1.9;color:#d0e5f5}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#102943;padding:28px;border:1px solid #164c70;border-radius:15px;transition:.4s}
+.card:hover{transform:translateY(-9px);border-color:#00c8ff;box-shadow:0 0 20px #00c8ff25}
+.card .icon{font-size:40px;margin-bottom:15px}
+.card h3{color:#00c8ff;margin-bottom:12px}
+.card p,.card li{color:#d0e5f5;line-height:1.8}
+.card ul{padding-left:20px}
+.light{background:#0c2036}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.gallery img{width:100%;height:230px;object-fit:cover;border-radius:13px;transition:.4s}
+.gallery img:hover{transform:scale(1.04)}
+.contact{text-align:center;background:#06101f}
+.contact p{color:#d0e5f5;line-height:2}
+footer{text-align:center;background:#030a14;padding:22px;color:#9bb5cb}
+.reveal{opacity:0;transform:translateY(35px);transition:all .8s ease}
+.reveal.show{opacity:1;transform:translateY(0)}
+@keyframes slide{from{opacity:0;transform:translateX(-40px)}to{opacity:1;transform:translateX(0)}}
+@media(max-width:768px){
+ .menu{display:block}
+ nav{display:none;position:absolute;top:65px;left:0;width:100%;background:#06101f;flex-direction:column;padding:25px;text-align:center}
+ nav.active{display:flex}
+ .hero{min-height:480px}.hero h1{font-size:35px}
+ .about{grid-template-columns:1fr}
+ .cards,.gallery{grid-template-columns:1fr}
+ section{padding:60px 6%}
+}
+</style>
+</head>
+<body>
+<header>
+ <div class="logo">TKJ <span>BANJAR ASRI</span></div>
+ <div class="menu" onclick="toggleMenu()" aria-label="Buka menu">☰</div>
+ <nav id="navbar">
+  <a href="#home">Home</a><a href="#profil">Profil</a><a href="#visi">Visi Misi</a>
+  <a href="#kompetensi">Kompetensi</a><a href="#galeri">Galeri</a><a href="#kontak">Kontak</a>
+ </nav>
+</header>
+
+<div class="hero" id="home">
+ <div class="hero-content">
+  <h1>WELCOME TO <span>TKJ SMK BANJAR ASRI</span></h1>
+  <p>Menciptakan generasi yang kreatif, inovatif, kompeten, dan siap menghadapi perkembangan teknologi di era digital.</p>
+  <a href="#profil" class="btn">Jelajahi Sekarang</a>
+ </div>
+</div>
+
+<section id="profil" class="reveal">
+ <div class="heading"><h2>Profil Jurusan</h2><p>Mengenal lebih dekat jurusan TKJ</p></div>
+ <div class="about">
+  <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789" alt="Teknologi komputer">
+  <div>
+   <h3>Teknik Komputer dan Jaringan</h3>
+   <p>Teknik Komputer dan Jaringan (TKJ) merupakan kompetensi keahlian yang mempelajari komputer, perangkat keras, perangkat lunak, jaringan komputer, serta teknologi informasi.</p><br>
+   <p>Siswa TKJ dibekali keterampilan praktik agar mampu memahami, merakit, menginstalasi, mengonfigurasi, dan memelihara perangkat komputer serta jaringan.</p>
+  </div>
+ </div>
+</section>
+
+<section id="visi" class="light reveal">
+ <div class="heading"><h2>Visi dan Misi</h2><p>Tujuan dan komitmen jurusan TKJ</p></div>
+ <div class="cards">
+  <div class="card"><div class="icon">🎯</div><h3>Visi</h3><p>Menghasilkan lulusan yang kompeten, kreatif, inovatif, berkarakter, dan mampu bersaing di bidang teknologi.</p></div>
+  <div class="card"><div class="icon">🚀</div><h3>Misi</h3><ul><li>Meningkatkan keterampilan komputer.</li><li>Mengembangkan kemampuan jaringan.</li><li>Menanamkan kedisiplinan.</li><li>Mempersiapkan siswa untuk dunia kerja.</li></ul></div>
+  <div class="card"><div class="icon">💡</div><h3>Tujuan</h3><p>Membentuk siswa yang memiliki pengetahuan dan keterampilan dalam bidang teknologi komputer dan jaringan.</p></div>
+ </div>
+</section>
+
+<section id="kompetensi" class="reveal">
+ <div class="heading"><h2>Kompetensi Keahlian</h2><p>Keterampilan yang dipelajari siswa TKJ</p></div>
+ <div class="cards">
+  <div class="card"><div class="icon">💻</div><h3>Hardware Komputer</h3><p>Mempelajari perakitan dan perawatan komputer.</p></div>
+  <div class="card"><div class="icon">🌐</div><h3>Jaringan Komputer</h3><p>Mempelajari instalasi dan konfigurasi jaringan.</p></div>
+  <div class="card"><div class="icon">🐧</div><h3>Linux Server</h3><p>Mempelajari sistem operasi Linux dan server.</p></div>
+  <div class="card"><div class="icon">🔧</div><h3>Instalasi OS</h3><p>Melakukan instalasi sistem operasi komputer.</p></div>
+  <div class="card"><div class="icon">🔌</div><h3>Pengkabelan</h3><p>Mempelajari pembuatan kabel jaringan.</p></div>
+  <div class="card"><div class="icon">🛡️</div><h3>Keamanan Jaringan</h3><p>Mempelajari dasar perlindungan jaringan.</p></div>
+ </div>
+</section>
+
+<section class="light reveal">
+ <div class="heading"><h2>Fasilitas Pembelajaran</h2><p>Penunjang kegiatan belajar dan praktik</p></div>
+ <div class="cards">
+  <div class="card"><div class="icon">🖥️</div><h3>Laboratorium Komputer</h3><p>Tempat praktik komputer dan teknologi.</p></div>
+  <div class="card"><div class="icon">🌐</div><h3>Peralatan Jaringan</h3><p>Media praktik konfigurasi jaringan.</p></div>
+  <div class="card"><div class="icon">🔧</div><h3>Peralatan Praktik</h3><p>Peralatan untuk kegiatan pembelajaran TKJ.</p></div>
+ </div>
+</section>
+
+<section id="galeri" class="reveal">
+ <div class="heading"><h2>Galeri Kegiatan</h2><p>Dokumentasi kegiatan pembelajaran TKJ</p></div>
+ <div class="gallery">
+  <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Belajar teknologi">
+  <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780" alt="Praktik teknologi">
+  <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998" alt="Kegiatan belajar">
+ </div>
+</section>
+
+<section id="kontak" class="contact reveal">
+ <div class="heading"><h2>Hubungi Kami</h2><p>SMK Banjar Asri</p></div>
+ <p>Cimaung, Kabupaten Bandung, Jawa Barat<br>Email: smkba.cmng@gmail.com</p><br>
+ <a href="https://smkba.sch.id/" class="btn" target="_blank" rel="noopener">Website Sekolah</a>
+</section>
+
+<footer><p>© 2026 TKJ SMK BANJAR ASRI</p><p>Technology • Creativity • Future</p></footer>
+
+<script>
+function toggleMenu(){
+ document.getElementById("navbar").classList.toggle("active");
+}
+document.querySelectorAll("#navbar a").forEach(link=>{
+ link.addEventListener("click",()=>{
+  document.getElementById("navbar").classList.remove("active");
+ });
+});
+const observer=new IntersectionObserver(entries=>{
+ entries.forEach(entry=>{
+  if(entry.isIntersecting) entry.target.classList.add("show");
+ });
+},{threshold:0.15});
+document.querySelectorAll(".reveal").forEach(element=>observer.observe(element));
+</script>
+</body>
+  </html>
